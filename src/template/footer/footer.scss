@@ -1,0 +1,45 @@
+.footer {
+  margin-top: auto;
+
+  &__inner {
+    background-color: #d87ff6;
+    padding: 27px 0 28px;
+  }
+
+  &__content {
+    margin: 0;
+    padding: 0 100px 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+
+    @include media(sm) {
+      flex-direction: row;
+    }
+
+    @include media(lg) {
+      padding: 0 220px 0 205px;
+    }
+  }
+
+  &__link {
+    display: block;
+    line-height: 27px;
+    font-weight: 500;
+
+    @include media(lg) {
+      line-height: 45px;
+    }
+
+    &.link-decor:before {
+      bottom: 4px;
+
+      @include media(lg) {
+        bottom: 9px;
+      }
+    }
+  }
+}

@@ -1,0 +1,80 @@
+.form-field {
+    --dp-flex: flex;
+    display: var(--dp-flex);
+    align-items: center;
+    //*
+    position: relative;
+    width: 100%;
+    font-size: size(18);
+    border: 1px solid $color-primary;
+    --field-input-color: #000;
+    //*
+    &__input {
+        color: var(--field-input-color);
+        width: 100%;
+        display: block;
+        &::placeholder {
+            opacity: 0;
+        }
+        &:focus,
+        &:not(:placeholder-shown) {
+            & ~ .form-field__text {
+                opacity: 0;
+            }
+        }
+        &:-webkit-autofill {
+            -webkit-text-fill-color: var(--field-input-color);
+            transition: background-color 500000s ease-in-out 0s;
+        }
+    }
+    //*
+    &__error,
+    &__input,
+    &__required,
+    &__text {
+        font-size: 1em;
+        transition-duration: $td;
+        padding: size(25) size(40);
+    }
+    //*
+    &__error,
+    &__required,
+    &__text {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        pointer-events: none;
+        width: 100%;
+    }
+    &__text {
+        color: currentColor;
+        span {
+            color: $color-primary;
+        }
+    }
+    &__error,
+    &__required {
+        color: $color-primary;
+        width: 100%;
+        opacity: 0;
+    }
+    //* Mod invalid (class js)
+    // text/tel/password
+    &._required{
+        &>* {
+            opacity: 0;
+        }
+        .form-field__required {
+            opacity: 1;
+        }
+    }
+    &._error {
+        &>* {
+            opacity: 0;
+        }
+        .form-field__error {
+            opacity: 1;
+        }
+    }
+}

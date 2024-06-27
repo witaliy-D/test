@@ -1,0 +1,131 @@
+.nav-menu {
+  display: flex;
+  width: 100%;
+
+  @include media(lg, max) {
+    flex-direction: column;
+    align-items: flex-start;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    transition: 0.1s;
+    transform: scale(0);
+  }
+
+  &.nav-menu--open {
+    z-index: 899;
+    transform: scale(1);
+    .nav-menu__btn {
+      display: block;
+    }
+
+    .nav-menu__items {
+      opacity: 1;
+      transform: perspective(600px) translateY(0%) rotateX(0deg);
+      transition: all 0.8s ease 0s;
+    }
+  }
+
+  .nav-menu__btn {
+    display: none;
+  }
+
+  &__inner {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    padding-left: var(--local-container-gap);
+    padding-right: var(--local-container-gap);
+    margin-left: auto;
+    margin-right: auto;
+
+    @include media(sm) {
+      max-width: 440px;
+    }
+
+    @include media(xs) {
+      max-width: 520px;
+    }
+
+    @include media(md) {
+      max-width: 720px;
+    }
+
+    @include media(lg) {
+      flex-direction: row;
+      max-width: inherit;
+      background-color: transparent;
+      height: auto;
+      min-height: inherit;
+      padding: 0;
+      overflow: visible;
+    }
+  }
+
+  &__items {
+    background-color: $color-bg;
+    padding: 73px 30px 57px;
+    width: 100%;
+    overflow: auto;
+    opacity: 0;
+    transform: perspective(600px) translateY(-120%) rotateX(45deg);
+    transition: transform 0.8s, opacity 0.1s ;
+
+    @include media(md) {
+      max-width: 450px;
+      padding: 33px 70px 57px 65px;
+    }
+
+    @include media(lg) {
+      width: auto;
+      max-width: inherit;
+      background-color: transparent;
+      padding: 0;
+      overflow: visible;
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+  }
+
+  &__list {
+    line-height: 45px;
+    display: flex;
+    flex-direction: column;
+    gap: size(39);
+    margin: 0;
+    margin-bottom: 55px;
+    padding: 0;
+    list-style: none;
+
+    @include media(lg) {
+      gap: size(60);
+      flex-direction: row;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-left: 95px;
+      margin-bottom: 0;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    line-height: 45px;
+    font-weight: 500;
+
+    &.active {
+      font-weight: 700;
+      text-decoration: underline;
+    }
+
+    &.link-decor:before {
+      bottom: 13px;
+
+      @include media(lg) {
+        bottom: 9px;
+      }
+    }
+  }
+}

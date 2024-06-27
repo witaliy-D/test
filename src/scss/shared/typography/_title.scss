@@ -1,0 +1,43 @@
+.title {
+    --dp-block: block;
+    display: var(--dp-block);
+    font-weight: 700;
+    line-height: 1.5;
+    //color: #fff;
+    //font-family: $font;
+    //text-transform: uppercase;
+    word-wrap: break-word;
+    margin: 0;
+
+    //? theme
+    //&--white {
+    //    color: #fff;
+    //}
+
+    //* размеры
+    &--size {
+        &-sm {
+            font-size: size(24);
+            @include media(lg) {
+                font-size: size(36);
+            }
+        }
+        &-md {
+            font-size: 27px;
+            @include media(lg) {
+                font-size: 30px;
+            }
+        }
+        &-lg {
+            font-size: 36px;
+            line-height: 1;
+            @include media(lg) {
+                font-size: 45px;
+            }
+        }
+    }
+    //* стиль
+}
+
+
+// font-feature-settings: 'pnum' on, 'lnum' on;

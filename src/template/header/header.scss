@@ -1,0 +1,36 @@
+.header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 950;
+
+  // &._menu-active {
+  //   .header-hide {
+  //     opacity: 0;
+  //     pointer-events: none;
+  //   }
+  // }
+
+  // &-hide {
+  //   transition-duration: $td;
+  // }
+
+  &__inner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 45px 20px 38px;
+    gap: size(10);
+    background-color: #b47ff6;
+
+    @include media(md) {
+      padding: 45px 40px 38px;
+    }
+
+    @include media(lg) {
+      padding: 55px 60px 48px;
+    }
+  }
+}

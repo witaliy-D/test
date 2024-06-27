@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
+  <title>main</title>
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+
+<body data-scroll-offset>
+  <div class="wrapper container">
+    <header id="header" class="header wow fadeIn" data-scroll-offset>
+  <div class="container">
+    <div class="header__inner">
+
+      <nav class="nav-menu m:hide m:show@lg" data-scroll-offset>
+        <div class="nav-menu__inner" >
+          <div class="nav-menu__items">
+            <ul class="nav-menu__list">
+              <li class="nav-menu__item">
+                <a href="#" class="nav-menu__link active">Text</a>
+              </li>
+              <li class="nav-menu__item">
+                <a href="#" class="nav-menu__link link-decor">Text</a>
+              </li>
+              <li class="nav-menu__item">
+                <a href="#" class="nav-menu__link link-decor">Text</a>
+              </li>
+            </ul>
+            <button class="btn btn-primary btn-primary--md btn--theme-primary nav-menu__btn m:center-x" data-trigger="#modal-form, modalOpen">Open pop-up button</button>
+          </div>
+        </div>
+      </nav>
+
+      <button class="burger--menu burger m:hide@lg" type="button">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+    <main>
+      <section id="banner" class="banner wow zoomIn">
+  <div class="banner__inner  pt-20 pt-40@lg">
+    <div class="banner__content">
+      <div class="banner__slider swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="banner__slide">
+              <h2 class="title title--size-lg">H1 text</h2>
+              <button class="btn btn-primary btn-primary--md btn--theme-primary" data-trigger="#modal-form, modalOpen">Open pop-up button</button>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="banner__slide">
+              <h2 class="title title--size-lg">H1 text</h2>
+              <button class="btn btn-primary btn-primary--md btn--theme-primary" data-trigger="#modal-form, modalOpen">Open pop-up button</button>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="banner__slide">
+              <h2 class="title title--size-lg">H1 text</h2>
+              <button class="btn btn-primary btn-primary--md btn--theme-primary" data-trigger="#modal-form, modalOpen">Open pop-up button</button>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-next">
+          <svg width="37" height="74" viewBox="0 0 40 77" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.898804 1.03821L38.1777 38.3172L0.898804 75.5961" stroke="white" stroke-width="2" />
+          </svg>
+        </div>
+        <div class="swiper-button-prev">
+          <svg width="37" height="74" viewBox="0 0 40 77" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M39.0264 75.5961L1.7475 38.3171L39.0264 1.03821" stroke="white" stroke-width="2" />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="grid" class="grid wow fadeIn">
+  <div class="grid__inner pt-20 pt-40@lg">
+    <h2 class="title title--size-md t:center mb-20 mb-40@lg">H2 text</h2>
+    <div class="grid__items pb-5">
+      <div class="grid__item">1</div>
+      <div class="grid__item">2</div>
+      <div class="grid__item">3</div>
+      <div class="grid__item">4</div>
+    </div>
+  </div>
+</section>
+
+<section id="intro" class="intro wow fadeIn">
+  <div class="intro__inner pt-20 pt-40@lg">
+    <h2 class="title title--size-md t:center mb-20 mb-40@lg">H2 text</h2>
+    <div class="intro__items mb-20 mb-40@lg">
+      <div class="intro__item adaptive-box"></div>
+      <div class="intro__item adaptive-box"></div>
+      <div class="intro__item adaptive-box"></div>
+      <div class="intro__item adaptive-box"></div>
+      <div class="intro__item adaptive-box"></div>
+    </div>
+    <b class="item t:center t:500 color-text mb-10">Text utp</b>
+    <button class="btn btn-primary btn-primary--md btn--theme-primary mb-20 mb-40@lg m:center-x"
+      data-trigger="#modal-form, modalOpen">Open pop-up button</button>
+  </div>
+</section>
+
+    </main>
+    <footer class="footer wow fadeIn">
+  <div class="footer__inner">
+    <ul class="footer__content">
+      <li><a href="#" class="footer__link link-decor">Text</a></li>
+      <li><a href="#" class="footer__link link-decor">Text</a></li>
+      <li><a href="#" class="footer__link link-decor">Text</a></li>
+      <li><a href="#" class="footer__link link-decor">Text</a></li>
+    </ul>
+  </div>
+</footer>
+
+  </div>
+
+  <div id="modal-form" class="modal modal-form modal--theme-secondary" data-modal="form">
+    <div class="modal__wrapper">
+        <div class="modal__container">
+            <div class="modal__bg-close" data-modal-close=""></div>
+            <div class=" modal-form__box">
+                <div class="modal-form__wrapper">
+                    <button class="modal-form__close modal__close btn" data-modal-close="">x</button>
+                    <div class="modal-form__content">
+                      <p class="modal-form__info">Pop-up</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="js/libraries/libraries.js"></script>
+  <script defer src="js/main/main.js"></script>
+</body>
+
+</html>

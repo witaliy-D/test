@@ -1,0 +1,9 @@
+{
+    "main": [
+        "banner",
+        "grid",
+        "intro",
+        //"program"
+    ],
+    //"thanks": "thanks"
+}

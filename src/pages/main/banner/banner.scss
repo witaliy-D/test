@@ -1,0 +1,51 @@
+.banner {
+
+  &__content {
+    padding: 41px 10px;
+    background-color:  #7029cb;
+
+    @include media(xs) {
+      padding: 51px 40px;
+    }
+  }
+
+  &__slider {
+    line-height: 1;
+  }
+
+  &__slide {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+
+    @include media(md) {
+      flex-direction: row;
+      margin-bottom: 16px;
+    }
+
+    @include media(lg) {
+      padding-right: 100px;
+    }
+
+  }
+
+  .swiper-button-next, .swiper-button-prev {
+    --swiper-navigation-color: #fff;
+    width: 18px;
+    height: 37px;
+    transform: translateY(-50%);
+    margin-top: 0;
+
+    @include media(xs) {
+      width: 37px;
+      height: 74px;
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+}

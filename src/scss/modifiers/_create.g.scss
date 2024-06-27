@@ -1,0 +1,6 @@
+.pt-20 { padding-top: size(20); }
+.pt-40\@lg { @include media(lg) { padding-top: size(40); } }
+.mb-20 { margin-bottom: size(20); }
+.mb-40\@lg { @include media(lg) { margin-bottom: size(40); } }
+.pb-5 { padding-bottom: size(5); }
+.mb-10 { margin-bottom: size(10); }

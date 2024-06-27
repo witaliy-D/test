@@ -1,0 +1,34 @@
+.btn-primary {
+    --dp-flex: flex;
+    display: var(--dp-flex);
+    align-items: center;
+    justify-content: center;
+    //*
+    font-weight: 400;
+    //*
+    border-radius: 25px;
+
+    &._icon {
+        justify-content: space-between;
+    }
+    &--sm {
+        font-size: size(14);
+        padding: size(17) size(40);
+        line-height: size(17);
+    }
+    &--md {
+        //min-height: size(60);
+        padding: size(15) size(25);
+        font-size: 18px;
+        line-height: 24px;
+
+        @include media(lg) {
+          font-size: 24px;
+          line-height: 28px;
+        }
+    }
+    &--lg {
+        min-height: size(70);
+        padding: size(10) size(30);
+    }
+}
