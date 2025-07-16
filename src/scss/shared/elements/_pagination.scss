@@ -1,0 +1,35 @@
+.pagination {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    grid-gap: 8px;
+  }
+
+  li {
+    flex: 0 0 auto;
+
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 17px;
+      text-transform: uppercase;
+      text-align: center;
+      min-width: 34px;
+      color: gray;
+    }
+
+    &.active a {
+      height: 34px;
+      border-radius: 50%;
+      color: #fff;
+      background-color: blue;
+    }
+  }
+}

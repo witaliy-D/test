@@ -1,0 +1,14 @@
+{
+  "main": [
+    "news"
+  ],
+  "404": [
+    "error"
+  ],
+  "text": [
+    "content"
+  ],
+  "card": [
+    "new"
+  ]
+}

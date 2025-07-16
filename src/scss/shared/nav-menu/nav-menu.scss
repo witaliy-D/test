@@ -1,0 +1,58 @@
+@use "../../core/mixins/media" as *;
+@use "../../../scss/config/theme" as *;
+
+.nav-menu {
+  display: flex;
+  width: 100%;
+
+  @include media(lg, max) {
+    flex-direction: column;
+    align-items: flex-start;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: -105%;
+    height: auto;
+    z-index: 899;
+    transition: all 0.3s;
+  }
+
+  &.nav-menu--open {
+    left: 0;
+
+    .nav-menu__inner {
+      transition: all 0.3s;
+      box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.5);
+    }
+  }
+
+  &__inner {
+    display: flex;
+    flex-grow: 1;
+
+    @include media(lg, max) {
+
+      flex-direction: column;
+      width: 100%;
+      //max-width: 280px;
+      background-color: #fff;
+      height: 100%;
+      min-height: 100vh;
+      padding: 40px 20px 70px;
+      overflow: auto;
+      gap: 50px;
+      box-shadow: none;
+    }
+  }
+
+  &__toggle,
+  &__toggle--close {
+    @include media(lg) {
+      display: none;
+    }
+  }
+
+  &__toggle--close {
+    margin-left: auto;
+  }
+}

@@ -1,0 +1,59 @@
+@use "../../../scss/core/mixins/media" as *;
+@use "../../../scss/config/core" as *;
+@use "../../../scss/config/theme" as *;
+
+.news {
+
+  &__items {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-bottom: 30px;
+
+    @include media(md) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include media(lg) {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 2px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+  }
+
+  &__img {
+    --adaptive-box: 75%;
+
+    img {
+      border-radius: 20px;
+    }
+  }
+
+  &__content {
+    padding: 24px 16px;
+  }
+
+  &__date {
+    display: block;
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 12px;
+    line-height: 175%;
+    margin-bottom: 8px;
+  }
+
+  &__title {
+    font-size: 21px;
+    line-height: 24px;
+  }
+
+  &__slide-text {
+    line-height: 150%;
+    margin-bottom: 0;
+  }
+}
