@@ -1,0 +1,74 @@
+@use "../../core/mixins/media" as *;
+@use "../../../scss/config/core" as *;
+@use "../../../scss/config/theme" as *;
+
+.title {
+  --dp-block: block;
+  display: var(--dp-block);
+  word-wrap: break-word;
+  font-weight: 400;
+  color: $font-color;
+  font-family: $font-secondary;
+
+  &--size {
+
+    &-xs {
+      font-size: 16px;
+      line-height: 1.1875;
+
+      @include media(xs) {
+        font-size: 20px;
+      }
+
+      @include media(md) {
+        font-size: 25px;
+      }
+
+      @include media(xl) {
+        font-size: 32px;
+      }
+    }
+
+    &-md {
+      font-size: 20px;
+      line-height: 106%;
+
+      @include media(xs) {
+        font-size: 24px;
+      }
+
+      @include media(md) {
+        font-size: 30px;
+      }
+
+      @include media(lg) {
+        font-size: 40px;
+      }
+
+      @include media(xl) {
+        font-size: 48px;
+        line-height: 105%;
+      }
+    }
+
+    &-lg {
+      text-transform: uppercase;
+      font-size: 32px;
+      line-height: 35px;
+
+      @include media(md) {
+        font-size: 55px;
+        line-height: 66px;
+        letter-spacing: 0.02em;
+      }
+    }
+
+    &-xl {
+      text-transform: uppercase;
+      font-size: 36px;
+      line-height: 40px;
+    }
+  }
+}
+
+

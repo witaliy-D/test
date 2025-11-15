@@ -1,0 +1,51 @@
+@use "../../scss/core/mixins/media" as *;
+@use "../../scss/config/core" as *;
+@use "../../scss/config/theme" as *;
+
+.header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 950;
+  background-color: #ffffff;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 22px 0;
+
+    @include media(md) {
+      padding: 32px 0;
+    }
+
+    @include media(lg) {
+      padding: 28px 0;
+    }
+  }
+
+  &__items {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex-grow: 1;
+    justify-content: flex-end;
+
+    .search {
+      display: none;
+
+      @include media(lg) {
+        display: block;
+      }
+    }
+
+    .social {
+      display: none;
+
+      @include media(md) {
+        display: flex;
+      }
+    }
+  }
+}

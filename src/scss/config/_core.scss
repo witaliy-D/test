@@ -1,0 +1,36 @@
+@use "theme" as *;
+
+//*
+$font-primary: "Arial", sans-serif;
+$font-secondary: "AA Bebas Neue", sans-serif;
+$font-thirdary: "Futura PT", sans-serif;
+//* Размеры шрифта
+$font-size:(
+    'default':  16px,
+    'md':       18px,
+    //'xl':       20px,
+    //'hg':       24px,
+);
+//* Глобальные настройки (body)
+$global-settings:(
+    'font': $font-primary,
+    'line-height': 1.2,
+    'font-weight': 400,
+    'color': $text-color,
+    'bg': $bg-color
+);
+
+//* базавая настройка скорости анимаций
+$td: 400ms;
+
+//* Размеры макета (дизайн макета):
+$layout-size-min: 320;
+$layout-size-max: 1920;
+
+
+
+//* Требуется для работы функции size-clamp, rem
+//* src\scss\core\functions\_size.scss
+//* src\scss\layout\_root.scss
+//?                                                                                               тут
+//* Учавствует в calc(50px + (100 - 50) * ((var(--size-window) - var(--width-window-px)) / (#{$layout-size} - var(--width-window))));

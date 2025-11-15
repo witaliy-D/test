@@ -1,0 +1,58 @@
+@use "../../../scss/config/theme" as *;
+@use "../../../scss/core/mixins/media" as *;
+
+.burger {
+  --dp-flex: flex;
+  display: var(--dp-flex);
+  flex-direction: column;
+  align-items: center;
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+  position: relative;
+  padding: 0;
+  border: 0;
+  flex-shrink: 0;
+
+  @include media(md) {
+    transform: scale(1.2);
+  }
+
+  span {
+    display: block;
+    transition: all 0.2s ease 0s;
+    position: absolute;
+    top: calc(50% - 1px);
+    right: 2px;
+    width: 18px;
+    height: 2px;
+    border-radius: 1px;
+    background: $font-color;
+
+    &:nth-child(1) {
+      top: 5px;
+    }
+
+    &:nth-child(3) {
+      top: auto;
+      bottom: 5px;
+    }
+  }
+
+  &.burger--close span {
+    transform: scale(0);
+    background: $font-color;
+
+    &:nth-child(1) {
+      transform: rotate(-45deg);
+      top: calc(50% - 1px);
+    }
+
+    &:nth-child(3) {
+      transform: rotate(45deg);
+      bottom: calc(50% - 1px);
+    }
+  }
+}
+
+

@@ -1,0 +1,8 @@
+@use "../../scss/core/mixins/media" as *;
+@use "../../scss/config/core" as *;
+@use "../../scss/config/theme" as *;
+
+.footer {
+  background-color: #121212;
+  color: #fff;
+}

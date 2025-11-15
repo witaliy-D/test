@@ -1,0 +1,28 @@
+@use "../../../scss/core/mixins/media" as *;
+@use "../../../scss/config/core" as *;
+@use "../../../scss/config/theme" as *;
+
+.intro {
+  margin-bottom: 40px;
+  margin-top: 18px;
+
+  @include media(md) {
+    margin-bottom: 55px;
+    margin-top: 34px;
+  }
+
+  .breadcrumb {
+    display: none;
+
+    @include media(md) {
+      display: block;
+    }
+  }
+
+  .title-page {
+
+    @include media(md) {
+      display: none;
+    }
+  }
+}

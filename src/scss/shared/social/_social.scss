@@ -1,0 +1,38 @@
+@use "../../../scss/config/core" as *;
+@use "../../../scss/core/mixins/media" as *;
+
+.social {
+  display: flex;
+  align-items: center;
+  flex: 0 0 auto;
+  transition-duration: $td;
+  line-height: 0;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    flex-shrink: 0;
+
+    a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      @media (pointer: fine) {
+        &:hover {
+          opacity: 0.5;
+        }
+
+        &:active {
+          opacity: 0.5;
+        }
+      }
+
+      &:active {
+        opacity: 0.5;
+      }
+    }
+  }
+}

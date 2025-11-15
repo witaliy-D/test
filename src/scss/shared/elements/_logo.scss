@@ -1,0 +1,17 @@
+@use "../../../scss/core/mixins/media" as *;
+
+.logo {
+  flex-shrink: 0;
+  display: inline-block;
+  line-height: 0;
+
+  img {
+    width: 74px;
+    height: 24px;
+
+    @include media(md) {
+      width: 160px;
+      height: 52px;
+    }
+  }
+}

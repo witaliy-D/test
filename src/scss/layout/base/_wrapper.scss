@@ -1,0 +1,27 @@
+@use "../../../scss/core/mixins/media" as *;
+
+main {
+  flex-grow: 1;
+}
+
+.main {
+  padding-top: 68px;
+
+  @include media(md) {
+    padding-top: 116px;
+  }
+}
+
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.section {
+  margin-bottom: 35px;
+
+  @include media(md) {
+    margin-bottom: 120px;
+  }
+}

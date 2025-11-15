@@ -1,0 +1,28 @@
+@use "../../../scss/core/mixins/media" as *;
+@use "../../../scss/config/core" as *;
+@use "../../../scss/config/theme" as *;
+
+.news {
+
+  &.section {
+    @include media(md, max) {
+      margin-bottom: 80px;
+    }
+  }
+
+  .blog__item--big {
+    @include media(lg) {
+      order: -1;
+    }
+  }
+
+  .btn-more {
+    align-self: center;
+
+    @include media(md) {
+      align-self: flex-end;
+      order: -1;
+      margin-bottom: 54px;
+    }
+  }
+}

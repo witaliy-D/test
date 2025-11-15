@@ -1,0 +1,36 @@
+@use "../../../scss/config/theme" as *;
+
+.breadcrumb {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    font-size: 20px;
+    color: $color-secondary;
+    display: inline;
+
+    a {
+      display: inline-flex;
+      align-items: center;
+      font-size: 20px;
+      color: $text-color;
+      position: relative;
+
+
+      &:hover {
+        color: $color-secondary;
+      }
+
+      &::after {
+        content: "";
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        background-image: url('../img/global/arrow.svg');
+        background-size: cover;
+        margin-left: 5px;
+      }
+    }
+  }
+}
